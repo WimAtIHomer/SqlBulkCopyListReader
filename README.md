@@ -1,4 +1,4 @@
-BulkCopyListReader
+SqlBulkCopyListReader
 ==================
 
 An IDataReader implementation for IEnumerable<T> for use in SqlBulkCopy class
