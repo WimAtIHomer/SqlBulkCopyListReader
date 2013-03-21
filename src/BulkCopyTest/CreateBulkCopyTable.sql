@@ -1,0 +1,30 @@
+USE [TestDB]
+GO
+
+/****** Object:  Table [dbo].[BulkCopyTable]    Script Date: 05/18/2011 20:13:54 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[BulkCopyTable](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Counter] [int] NOT NULL,
+	[DateCreated] [datetime] NOT NULL,
+ CONSTRAINT [PK_BulkCopyTable] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
