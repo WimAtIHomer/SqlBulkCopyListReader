@@ -38,10 +38,10 @@ namespace IHomer.Common.BulkCopy
 
             _destinationTableName = string.IsNullOrWhiteSpace(destinationTableName) ? typeof(T).Name : destinationTableName;
 
-            if (_properties != null) return;
-
             lock (_thisLock)
             {
+                if (_properties != null) return;
+
                 using (var connection = new SqlConnection(connectionString))
                 {
                     Initialize(connection);
